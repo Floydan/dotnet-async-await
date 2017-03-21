@@ -1,0 +1,12 @@
+Api/GitHubHttpClient.cs
+Api/IGitHubApi.cs
+Controllers/AsyncController.cs
+Controllers/GithubController.cs
+Models/Owner.cs
+Models/Repo.cs
+Models/User.cs
+Program.cs
+Properties/AssemblyInfo.cs
+Startup.cs
+./Api/IGitHubApi.cs
+/var/folders/4z/84gfx82j1tzccj8ctpbbrbv80000gn/T/.NETCoreApp,Version=v1.0.AssemblyAttributes.cs
