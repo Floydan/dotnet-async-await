@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Refit;
 using WebApiAsync.Api;
 using WebApiAsync.Models;
+using System.Reactive.Linq;
+using System.Reactive.Threading.Tasks;
+using System.Threading;
+using System.Reactive.Concurrency;
 
 namespace WebApiAsync.Controllers
 {
@@ -47,5 +51,43 @@ namespace WebApiAsync.Controllers
             return Json(repos);
         }
 
+        // GET api/values
+        [HttpGet("users/{user}/repos/reactive")]
+        public async Task<JsonResult> ReactiveGetRepos(string user)
+        {
+            return Json(await GetUserAndReposObservalbe(user).ToTask());
+        }
+
+        private IObservable<List<Repo>> GetUserAndReposObservalbe(string user)
+        {
+            
+            return _gitHubApi
+            .GetUserObservable(user)
+            .SelectMany(githubUser => _gitHubApi
+                .GetReposObservable(user)
+                .SelectMany(repos =>
+                {
+                    Console.WriteLine($"running GetUserAndReposObservalbe() on thread {Thread.CurrentThread.ManagedThreadId}");
+                    foreach (var repo in repos)
+                    {
+                        repo.Owner = githubUser;
+                    }
+                    return Observable.Return(repos);
+                }));
+        }
+
+
+        //http://localhost:5000/api/github/users/?users=starrepublic&users=josipmirkovic&users=lohmander&users=sorting
+
+        [HttpGet("users/")]
+        public async Task<JsonResult> ReactiveGetMultipleRepos(string[] users){
+            return Json(await Observable
+            .Zip(
+                users.ToObservable()
+                .SelectMany(username => GetUserAndReposObservalbe(username))
+            .SubscribeOn(NewThreadScheduler.Default))
+            .ObserveOn(Scheduler.Default)
+            .ToTask());
+        }
     }
 }

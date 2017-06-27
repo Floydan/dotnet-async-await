@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "43e2906baef27a9ba190ae39d737c5caa9c2013b"
+    "signature": "1608dac489ec0e0b5c63a33e277b0c682080a2ab"
   },
   "compilationOptions": {
     "defines": [
@@ -36,6 +36,7 @@
           "Microsoft.Extensions.Logging.Debug": "1.0.2",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.2",
           "Microsoft.NETCore.App": "1.0.4",
+          "System.Reactive": "3.1.1",
           "refit": "3.0.1"
         },
         "runtime": {
@@ -1297,6 +1298,72 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Net.WebSockets.dll": {}
+        }
+      },
+      "system.reactive/3.1.1": {
+        "dependencies": {
+          "System.Reactive.PlatformServices": "3.1.1"
+        }
+      },
+      "system.reactive.core/3.1.1": {
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Threading.Thread": "4.0.0",
+          "System.Threading.ThreadPool": "4.0.10"
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/System.Reactive.Core.dll": {}
+        },
+        "compile": {
+          "lib/netcoreapp1.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "system.reactive.interfaces/3.1.1": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "system.reactive.linq/3.1.1": {
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "system.reactive.platformservices/3.1.1": {
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "compile": {
+          "lib/netcoreapp1.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "system.runtime.interopservices.windowsruntime/4.0.1": {
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {}
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
       "system.runtime.serialization.primitives/4.1.1": {
@@ -3515,6 +3582,48 @@
       "sha512": "sha512-2KJo8hir6Edi9jnMDAMhiJoI691xRBmKcbNpwjrvpIMOCTYOtBpSsSEGBxBDV7PKbasJNaFp1+PZz1D7xS41Hg==",
       "path": "system.net.websockets/4.0.0",
       "hashPath": "system.net.websockets.4.0.0.nupkg.sha512"
+    },
+    "system.reactive/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-elkQdVQoBVX39BHrYHMc3Rnbb7a9qBJIwNCvhq1psPMOEPo62/VHB0lJu671x3fOrGL4V/85n6p2Az1tw7Kvmg==",
+      "path": "system.reactive/3.1.1",
+      "hashPath": "system.reactive.3.1.1.nupkg.sha512"
+    },
+    "system.reactive.core/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CKWC+UP1aM75taNX+sTBn2P97uHIUjKxq+z45iy7P91QGFqNFleR2tsqIC76HMVvYl7o8oWyMiycdsc9rC1Z/g==",
+      "path": "system.reactive.core/3.1.1",
+      "hashPath": "system.reactive.core.3.1.1.nupkg.sha512"
+    },
+    "system.reactive.interfaces/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aNVY3QoRznGFeQ+w+bMqhD8ElNWoyYq+7XTQIoxKKjBOyTOjUqIMEf1wvSdtwC4y92zg2W9q38b4Sr6cYNHVLg==",
+      "path": "system.reactive.interfaces/3.1.1",
+      "hashPath": "system.reactive.interfaces.3.1.1.nupkg.sha512"
+    },
+    "system.reactive.linq/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HwsZsoYRg51cLGBOEa0uoZ5+d4CMcHEg/KrbqePhLxoz/SLA+ULISphBtn3woABPATOQ6j5YgGZWh4jxnJ3KYQ==",
+      "path": "system.reactive.linq/3.1.1",
+      "hashPath": "system.reactive.linq.3.1.1.nupkg.sha512"
+    },
+    "system.reactive.platformservices/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jCJ3iGDLb4duOxZ/Uo3O7PssWE48uRp0fw92AlIwrMNaZRUmZNkZyqbl0nUT+joFARBYun8XiVIDQreMJKBedA==",
+      "path": "system.reactive.platformservices/3.1.1",
+      "hashPath": "system.reactive.platformservices.3.1.1.nupkg.sha512"
+    },
+    "system.runtime.interopservices.windowsruntime/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oIIXM4w2y3MiEZEXA+RTtfPV+SZ1ymbFdWppHlUciNdNIL0/Uo3HW9q9iN2O7T7KUmRdvjA7C2Gv4exAyW4zEQ==",
+      "path": "system.runtime.interopservices.windowsruntime/4.0.1",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.0.1.nupkg.sha512"
     },
     "system.runtime.serialization.primitives/4.1.1": {
       "type": "package",

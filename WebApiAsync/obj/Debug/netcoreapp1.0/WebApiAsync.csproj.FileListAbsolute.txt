@@ -6,3 +6,11 @@
 /Users/richard/RiderProjects/WebApiAsync/WebApiAsync/obj/Debug/netcoreapp1.0/WebApiAsync.dll
 /Users/richard/RiderProjects/WebApiAsync/WebApiAsync/obj/Debug/netcoreapp1.0/WebApiAsync.pdb
 /Users/richard/RiderProjects/WebApiAsync/WebApiAsync/bin/Debug/netcoreapp1.0/WebApiAsync.pdb
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/bin/Debug/netcoreapp1.0/WebApiAsync.deps.json
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/bin/Debug/netcoreapp1.0/WebApiAsync.runtimeconfig.json
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/bin/Debug/netcoreapp1.0/WebApiAsync.runtimeconfig.dev.json
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/bin/Debug/netcoreapp1.0/WebApiAsync.dll
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/bin/Debug/netcoreapp1.0/WebApiAsync.pdb
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/obj/Debug/netcoreapp1.0/WebApiAsync.AssemblyInfo.cs
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/obj/Debug/netcoreapp1.0/WebApiAsync.dll
+/Users/richard/Projects/dotnet-async-await/WebApiAsync/obj/Debug/netcoreapp1.0/WebApiAsync.pdb
